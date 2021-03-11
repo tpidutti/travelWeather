@@ -42,7 +42,8 @@ function submitSeek(event){
         var cityBtn = document.createElement("BUTTON");
         cityBtn.innerHTML = document.querySelector("#name-input").value;
         document.body.append(cityBtn);
-        console.log(cityBtn)
+    //    localStorage.
+      
 
         var displayOneDayWeather = document.querySelector("#displayWeather");
         var cityName = document.createElement("h1");
