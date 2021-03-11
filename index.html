@@ -5,37 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+    />
     <script src="assets/style.css"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <script type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
+    ></script>
   </head>
   <body>
-
     <div class="container">
-      <div class="col-12 col-sm-4">
-        <h3>Search for a city:</h3>
-        <form id="searchForm">
-          <div class="form-group">
-            <label for="search"></label>
-            <input type="text" class="form-control" id="name-input" placeholder="Search" />
-          </div>  
-          <div>
-            <button class="btn btn-success">Submit</button>
-          </div>
-        </form>
+      <div class="row">
+        <div class="col-12 col-sm-4" id="searchBox">
+          <h3>Search for a city:</h3>
+          <form id="searchForm">
+            <div class="form-group">
+              <label for="search"></label>
+              <input type="text" class="form-control"
+                id="name-input" placeholder="Search"/>
+            </div>
+            <div>
+              <button class="btn btn-success">Submit</button>
+            </div>
+          </form>
+        </div>
+        <div class="col-sm-8 card align-item-center" id="displayWeather"></div>
       </div>
+      <div class="col-sm-8 card d-flex align-item-center" id="fiveDay"></div>
     </div>
-  
-    <!-- <div class="list-group">
-            <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-              The current link item
-            </a>
-            <a href="#" class="list-group-item list-group-item-action">A second link item</a>
-            <a href="#" class="list-group-item list-group-item-action">A third link item</a>
-            <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
-            <a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true">A disabled link item</a>
-          </div> -->
-
+    </div>
 
     <script src="assets/script.js"></script>
   </body>
