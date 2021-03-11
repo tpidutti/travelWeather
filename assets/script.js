@@ -14,54 +14,56 @@ function submitSeek(event){
     .then(function (data) {
     showWeather(data);
     console.log(data);
+
+    // var lattitude = object.coord.lat;
+    // var longitude = object.coord.lon;
+    // var weatherUvUrl = `http://api.openweathermap.org/data/2.5/uvi?lat=${lat}&lon=${lon}&appid=${api_key}`
+    // fetch(weatherUvUrl)
+    // .then((data) => data.json())
+    // .then(function (uv) {
+    // showWeather(uv);
+    // console.log(uv);
+
+
     //make the boxes with our weather data
-var fiveDays = document.createElement("card");
-fiveDays.innerHTML = document.querySelector("#fiveDay").value;
-console.log(fiveDays);
+
+// var fiveDays = document.createElement("card");
+// fiveDays.innerHTML = document.querySelector("#fiveDay").value;
+// console.log(fiveDays);
 
     });
 }
 
-seekWord.addEventListener("submit", submitSeek)
+    seekWord.addEventListener("submit", submitSeek)
 
-function showWeather (cityData) { 
-    console.log("showWeather")
+    function showWeather (cityData) { 
+        console.log("showWeather")
 
-    var cityBtn = document.createElement("BUTTON");
-    cityBtn.innerHTML = document.querySelector("#name-input").value;
-    document.body.append(cityBtn);
-    console.log(cityBtn)
+        var cityBtn = document.createElement("BUTTON");
+        cityBtn.innerHTML = document.querySelector("#name-input").value;
+        document.body.append(cityBtn);
+        console.log(cityBtn)
 
-    var displayOneDayWeather = document.querySelector("#displayWeather");
-    var cityName = document.createElement("h1");
-    cityName.innerHTML = cityData.name
-    displayOneDayWeather.append(cityName)
-    var todaysDate = moment().format("MMMM d, YYYY");
-    displayOneDayWeather.append(todaysDate);
-    // var weatherIcon = `http://openweathermap.org/img/wn/10d@2x.png`;
-    // var weatherIcon = baseurl.weather.id;
-    // displayOneDayWeather.append(weatherIcon);
-//    populate todays weather information from submitSeek function?
-    console.log(cityData)
+        var displayOneDayWeather = document.querySelector("#displayWeather");
+        var cityName = document.createElement("h1");
+        cityName.innerHTML = cityData.name
+        displayOneDayWeather.append(cityName)
+        var todaysDate = moment().format("MMMM d, YYYY");
+        displayOneDayWeather.append(todaysDate);
+        // var weatherIcon = `http://api.openweathermap.org/img/wn/10d@2x.png`;
+        // var weatherIcon = baseurl.weather.id;
+        // displayOneDayWeather.append(weatherIcon);
 
-}
+        console.log(cityData)
 
-
+    }
 
 
-
-
-// var lattitude = #.coord.lat;
-// var longitude = #.coord.lon;
-// `http://api.openweathermap.org/data/2.5/uvi?lat=${lat}&lon=${lon}&appid=${api_key}`
-
-// var allWeatherUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=${part}&appid=${api_key}`
-// fetch(allWeatherUrl)
-// .then((data) => data.json())
-// .then(function (data){
-//     console.log(data);
-// });
 
 // 5 day forcast
-// api.openweathermap.org/data/2.5/forecast?q={city name}&appid={API key}
-
+// var fiveDayWeather = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${api_key}`
+// fetch(fiveDayWeather)
+//     .then((data) => data.json())
+//     .then(function (forecast) {
+//     showWeather(forecast);
+//     console.log(forecast);
