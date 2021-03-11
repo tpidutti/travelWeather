@@ -4,21 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
-    />
-    <script src="assets/style.css"></script>
-    <script type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
-    ></script>
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"/>
+
+    <script type="text/javascript"src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <link rel="stylesheet" href="assets/style.css" />
   </head>
   <body>
+   
+    <div class="jumbotron">
+      <h1>Travel Weather</h1>
+    </div>
+
     <div class="container">
       <div class="row">
         <div class="col-12 col-sm-4" id="searchBox">
-          <h3>Search for a city:</h3>
+          <h4>Search for a city:</h4>
           <form id="searchForm">
             <div class="form-group">
               <label for="search"></label>
@@ -26,7 +28,7 @@
                 id="name-input" placeholder="Search"/>
             </div>
             <div>
-              <button class="btn btn-success">Submit</button>
+              <button class="btn btn-primary">submit</button>
             </div>
           </form>
         </div>
@@ -35,7 +37,7 @@
 <div>
   <h2>5-Day Forecast:</h2>
   <div class="card">
-    <div class="card-body" id="fiveDays">
+    <div class="fiveDays" id="1">
       weather
     </div>
   </div>
