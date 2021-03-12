@@ -14,6 +14,7 @@ function submitSeek(event){
     .then((data) => data.json())
     .then(function (data) {
     showWeather(data);
+    
     // console.log(data);
 
     // var lattitude = coord.lat;
@@ -47,9 +48,8 @@ function submitSeek(event){
         console.log(cityData)
         var todaysDate = moment().format("MMMM d, YYYY");
         displayOneDayWeather.append(todaysDate);
-        var temp = document.createElement("h3");
-        displayOneDayWeather.append(temp);
-        // console.log(cityData);
+        // var temp = document.createElement("h3");
+        // displayOneDayWeather.append(temp);
     }
     
     
