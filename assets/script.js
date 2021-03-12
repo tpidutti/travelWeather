@@ -44,7 +44,7 @@ function submitSeek(event){
         var cityName = document.createElement("h1");
         cityName.innerHTML = cityData.name
         displayOneDayWeather.append(cityName)
-        // console.log(cityData)
+        console.log(cityData)
         var todaysDate = moment().format("MMMM d, YYYY");
         displayOneDayWeather.append(todaysDate);
         var temp = document.createElement("h3");
