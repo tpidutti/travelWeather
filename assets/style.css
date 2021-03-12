@@ -1,13 +1,14 @@
 
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
-.jumbotron {
+.dashboard {
         background-color: black;
 }
 
-h3 {
+h1 {
     font-weight: bold;
     color: white;
     text-align: center;
-}
+};
