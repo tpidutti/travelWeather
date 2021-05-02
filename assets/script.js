@@ -17,24 +17,27 @@ function submitSeek(event){
     
     // console.log(data);
 
-    // var lattitude = coord.lat;
-    // var longitude = coord.lon;
-    // var weatherUvUrl = `http://api.openweathermap.org/data/2.5/uvi?lat=${lat}&lon=${lon}&appid=${api_key}`
-    // fetch(weatherUvUrl)
-    // .then(data => data.json()
-    // .then(function (uv) {
-    // console.log(weatherUvUrl);
+    var lat = coord.lat;
+    var lon = coord.lon;
+    var weatherUvUrl = `http://api.openweathermap.org/data/2.5/uvi?lat=${lat}&lon=${lon}&appid=${api_key}`
 
-    // }))
+    fetch(weatherUvUrl)
+    .then(data => data.json()
+    .then(function (uv) {
+    console.log(weatherUvUrl);
+    var weatherCard = document.createElement ("div");
+    weatherCard.classList.add("weatherCard");
 
-   
- 
+
+
+    }))
+
 });
 }
     seekWord.addEventListener("submit", submitSeek)
 
     function showWeather (cityData) { 
-        // console.log(showWeather)
+        console.log(showWeather)
 
         var cityBtn = document.createElement("BUTTON");
         // cityBtn.addEventListener("click", )
@@ -48,28 +51,30 @@ function submitSeek(event){
         console.log(cityData)
         var todaysDate = moment().format("MMMM d, YYYY");
         displayOneDayWeather.append(todaysDate);
-        // var temp = document.createElement("h3");
-        // displayOneDayWeather.append(temp);
+        var temp = document.createElement("h3");
+        displayOneDayWeather.append(temp);
     }
     
     
+function fiveDayResult(city) {
+    var fiveDayWeatherUrl = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${api_key}`;
+        
+        fetch(fiveDayWeatherUrl)
+        .then((data) => data.json())
+        .then(function (forecast) {
+        showWeather(forecast);
+        console.log(forecast);
+        });
 
-// var fiveDayWeatherUrl = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${api_key}`
-    
-//     fetch(fiveDayWeatherUrl)
-//     .then((data) => data.json())
-//     .then(function (forecast) {
-//     showWeather(forecast);
-//     console.log(forecast);
-//     });
+        var fiveCardEl = document.createElement("card");
+        fiveCardEl.setAttribute("src", fiveDayWeather);
+        fiveDays.innerHTML = ""
+        fiveDays.append(fiveCardEl)
+        console.log(fiveCardEl);
+        
+        var weatherIcon = "http://api.openweathermap.org/img/wn/" + weather[0].icon + "@2x.png"
+        var weatherIcon = baseurl.weather.id;
+        displayOneDayWeather.append(weatherIcon);
+}
 
-// var fiveCardEl = document.createElement("card");
-// fiveCardEl.setAttribute("src", fiveDayWeather);
-// fiveDays.innerHTML = ""
-// fiveDays.append(fiveCardEl)
-// console.log(fiveCardEl);
-
-// var weatherIcon = "http://api.openweathermap.org/img/wn/" + weather[0].icon + "@2x.png"
-// var weatherIcon = baseurl.weather.id;
-// displayOneDayWeather.append(weatherIcon);
 
