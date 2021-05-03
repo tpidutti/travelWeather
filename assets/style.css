@@ -12,7 +12,7 @@ h1 {
   text-align: center;
 }
 
-#futureWeather {
+#future-searches {
     display: flex;
     flex-direction: column;
     text-align: center;

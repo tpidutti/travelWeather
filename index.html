@@ -17,27 +17,15 @@
     </div>
 
     <div class="container">
-      <div class="row">
-        <div class="col-12 col-sm-4" id="searchBox">
-          <h4>Search for a city:</h4>
-          <form id="searchForm">
-            <div class="form-group">
-              <label for="search"></label>
-              <input type="text" class="form-control"
-                id="name-input" placeholder="Search"/>
-            </div>
-            <div>
-              <button class="btn btn-primary">submit</button>
-            </div>
-          </form>
-        </div>
-        <div class="col-sm-8 card align-item-center" id="displayWeather"></div>
-      </div>
-<div>
-  <h2>5-Day Forecast:</h2>
-  <card id="futureWeather">
-  </card>
+     <form id="form" class="search">
+       <h3>Search for a city:</h3>
+       <input type="text" id="city">
+       <button type="submit">Submit</button>
+     </form>
 </div>
+<ul id="past-searches"></ul>
+<div id="current-city"></div>
+<div id="future-searches" class="card"></div>
 
     <script src="assets/script.js"></script>
   </body>
